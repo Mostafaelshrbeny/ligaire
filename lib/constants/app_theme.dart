@@ -38,11 +38,12 @@ class AppThemeData {
       // Matches manifest.json colors and background color.
       primaryColor: const Color(0xFF030303),
       appBarTheme: AppBarTheme(
-        backgroundColor: Colors.blue,
+        backgroundColor: colorScheme.background,
         elevation: 0,
         iconTheme: IconThemeData(color: colorScheme.primary),
       ),
       iconTheme: IconThemeData(color: colorScheme.onPrimary),
+
       canvasColor: colorScheme.background,
       scaffoldBackgroundColor: colorScheme.background,
       highlightColor: Colors.transparent,
@@ -62,7 +63,7 @@ class AppThemeData {
     primaryContainer: Color(0xFF1CDEC9),
     secondary: Color(0xFF4D1F7C),
     secondaryContainer: Color(0xFF451B6F),
-    background: Color(0xFF241E30),
+    background: Color.fromARGB(255, 24, 23, 23),
     surface: Color(0xFF1F1929),
     onBackground: Color(0x0DFFFFFF),
     // White with 0.05 opacity
@@ -83,5 +84,21 @@ class AppThemeData {
       displayLarge: TextStyle(
           fontFamily: FontFamily.appFontFamily,
           color: Color.fromRGBO(226, 227, 228, 1),
-          fontSize: 24));
+          fontSize: 24),
+      headlineLarge: TextStyle(
+          fontFamily: FontFamily.appFontFamily,
+          color: Color.fromRGBO(226, 227, 228, 1),
+          fontSize: 18),
+      headlineSmall: TextStyle(
+          fontFamily: FontFamily.appFontFamily,
+          color: Colors.grey,
+          fontSize: 12),
+      displayMedium: TextStyle(
+          fontFamily: FontFamily.appFontFamily,
+          color: Color.fromRGBO(226, 227, 228, 1),
+          fontSize: 16),
+      displaySmall: TextStyle(
+          fontFamily: FontFamily.appFontFamily,
+          color: Color.fromRGBO(226, 227, 228, 1),
+          fontSize: 14));
 }

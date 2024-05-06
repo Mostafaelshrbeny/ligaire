@@ -14,4 +14,8 @@ class Device {
       {required BuildContext context, double percent = 1}) {
     return MediaQuery.of(context).size.width * percent;
   }
+
+  static closeKeyboard() {
+    FocusManager.instance.primaryFocus?.unfocus();
+  }
 }
