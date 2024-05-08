@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:ligare/constants/app_routs.dart';
+import 'package:ligare/constants/app_theme.dart';
 import 'package:ligare/constants/device.dart';
 import 'package:ligare/core/lang/locale_keys.g.dart';
 import 'package:ligare/presentation/widgets/custombutton.dart';
@@ -45,10 +46,7 @@ class SignUpIntroScreen extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(LocaleKeys.signupthisisokay.tr(),
-                        style: Theme.of(context)
-                            .textTheme
-                            .displaySmall!
-                            .copyWith(color: Colors.black)),
+                        style: AppThemeData.buttonTextThem(context)),
                     const Gap(12),
                     SvgPicture.asset('assets/images/Frame 115.svg')
                   ],

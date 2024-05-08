@@ -1,13 +1,14 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:ligare/constants/app_routs.dart';
+import 'package:ligare/constants/app_theme.dart';
 import 'package:ligare/constants/device.dart';
 import 'package:ligare/core/lang/locale_keys.g.dart';
 import 'package:ligare/presentation/widgets/backarrowbutton.dart';
 import 'package:ligare/presentation/widgets/custombutton.dart';
 import 'package:ligare/presentation/widgets/resendtext.dart';
 import 'package:ligare/presentation/widgets/verifycodepin.dart';
-import 'package:pinput/pinput.dart';
 
 class VerifyScreen extends StatelessWidget {
   const VerifyScreen({super.key});
@@ -43,12 +44,11 @@ class VerifyScreen extends StatelessWidget {
             AppCustomButton(
                 buttonChild: Text(
                   LocaleKeys.verifyverify.tr(),
-                  style: Theme.of(context)
-                      .textTheme
-                      .displaySmall!
-                      .copyWith(color: Colors.black),
+                  style: AppThemeData.buttonTextThem(context),
                 ),
-                ontap: () {}),
+                ontap: () {
+                  Navigator.pushNamed(context, Routes.setPasswordRoute);
+                }),
           ],
         ),
       ),

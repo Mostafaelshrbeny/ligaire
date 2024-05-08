@@ -10,9 +10,11 @@ class AppCustomTextField extends StatelessWidget {
     this.onChange,
     required this.hint,
     this.suffix,
+    this.isHidden = false,
   });
   final Function(String)? onChange;
   final String hint;
+  final bool isHidden;
   final Widget? suffix;
   @override
   Widget build(BuildContext context) {
@@ -21,6 +23,7 @@ class AppCustomTextField extends StatelessWidget {
       child: TextFormField(
         onChanged: onChange,
         maxLines: 1,
+        obscureText: isHidden,
         decoration: InputDecoration(
             suffixIcon: suffix,
             enabledBorder: const OutlineInputBorder(

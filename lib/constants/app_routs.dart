@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ligare/presentation/pages/loginscreen.dart';
 import 'package:ligare/presentation/pages/introscreen.dart';
 import 'package:ligare/presentation/pages/regesteriation.dart';
+import 'package:ligare/presentation/pages/setpassword.dart';
+import 'package:ligare/presentation/pages/setpreferences_screen.dart';
 import 'package:ligare/presentation/pages/signupintro.dart';
 import 'package:ligare/presentation/pages/verifycode.dart';
 
@@ -12,6 +14,8 @@ class Routes {
   static const String sugnupIntroRoute = "/SignUpIntro";
   static const String verifyRoute = "/Verify";
   static const String regesteriationRoute = "/Regesteriation";
+  static const String setPasswordRoute = "/SetPassword";
+  static const String setPreferencesRoute = "/SetPreferences";
 }
 
 class RouteGenerator {
@@ -27,6 +31,10 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const RegesteriationScreen());
       case Routes.verifyRoute:
         return MaterialPageRoute(builder: (_) => const VerifyScreen());
+      case Routes.setPasswordRoute:
+        return MaterialPageRoute(builder: (_) => const SetPasswordScreen());
+      case Routes.setPreferencesRoute:
+        return MaterialPageRoute(builder: (_) => const SetPreferencesScreen());
 
       default:
         return undefinedRoute();

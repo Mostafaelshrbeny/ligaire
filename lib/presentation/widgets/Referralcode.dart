@@ -31,7 +31,9 @@ class _ReferralcodeWidgetState extends State<ReferralcodeWidget> {
                 ? setState(() {
                     hidden = true;
                   })
-                : null;
+                : setState(() {
+                    hidden = false;
+                  });
           },
           hint: LocaleKeys.introwordstypeyourreferralcode.tr(),
         ),

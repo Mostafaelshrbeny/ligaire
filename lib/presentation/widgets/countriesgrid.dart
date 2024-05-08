@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:ligare/constants/app_theme.dart';
 import 'package:ligare/constants/assets.dart';
 import 'package:ligare/constants/countries.dart';
 import 'package:ligare/constants/device.dart';
@@ -101,10 +102,7 @@ class NextTextButton extends StatelessWidget {
       children: [
         Text(
           LocaleKeys.next.tr(),
-          style: Theme.of(context)
-              .textTheme
-              .displayMedium!
-              .copyWith(color: Colors.black, fontWeight: FontWeight.bold),
+          style: AppThemeData.buttonTextThem(context),
         ),
         const Gap(10),
         SvgPicture.asset(Assets.arrowButton)

@@ -8,23 +8,29 @@ class RegesterTextField extends StatelessWidget {
     super.key,
     required this.label,
     required this.hint,
+    this.suffixIcon,
+    this.isHidden = false,
   });
   final String label, hint;
+  final Widget? suffixIcon;
+  final bool isHidden;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            label,
-            style: Theme.of(context).textTheme.displaySmall,
-          ),
-          const Gap(4),
-          AppCustomTextField(hint: hint)
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          label,
+          style: Theme.of(context).textTheme.displaySmall,
+        ),
+        const Gap(4),
+        AppCustomTextField(
+          isHidden: isHidden,
+          hint: hint,
+          suffix: suffixIcon,
+        )
+      ],
     );
   }
 }

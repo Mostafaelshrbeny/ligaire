@@ -101,4 +101,10 @@ class AppThemeData {
           fontFamily: FontFamily.appFontFamily,
           color: Color.fromRGBO(226, 227, 228, 1),
           fontSize: 14));
+  static TextStyle buttonTextThem(BuildContext context) {
+    return Theme.of(context)
+        .textTheme
+        .displaySmall!
+        .copyWith(color: Colors.black);
+  }
 }
