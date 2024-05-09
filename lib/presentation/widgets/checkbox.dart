@@ -1,16 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ligare/constants/countries.dart';
 
-class CountryCheckBox extends StatelessWidget {
-  const CountryCheckBox({
+class AppCheckBox extends StatelessWidget {
+  const AppCheckBox({
     super.key,
     required this.groupValue,
-    required this.index,
   });
 
-  final String groupValue;
-  final int index;
+  final bool groupValue;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +18,7 @@ class CountryCheckBox extends StatelessWidget {
           side: const BorderSide(width: 0, style: BorderStyle.none),
           borderRadius: BorderRadius.circular(16)),
       onChanged: (value) {},
-      value: Country.countriesValue[index] == groupValue,
+      value: groupValue,
     );
   }
 }

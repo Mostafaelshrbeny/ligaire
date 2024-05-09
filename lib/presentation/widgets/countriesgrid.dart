@@ -66,8 +66,9 @@ class ChooseCountry extends StatelessWidget {
                       ),
                       Align(
                         alignment: Alignment.topRight,
-                        child: CountryCheckBox(
-                            index: index, groupValue: groupValue),
+                        child: AppCheckBox(
+                            groupValue:
+                                Country.countriesValue[index] == groupValue),
                       ),
                     ],
                   ),

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ligare/presentation/pages/allsetprefscreen.dart';
+import 'package:ligare/presentation/pages/favoritebrandscreen.dart';
+import 'package:ligare/presentation/pages/homescreen.dart';
 import 'package:ligare/presentation/pages/loginscreen.dart';
 import 'package:ligare/presentation/pages/introscreen.dart';
+import 'package:ligare/presentation/pages/notificatioscreen.dart';
 import 'package:ligare/presentation/pages/regesteriation.dart';
 import 'package:ligare/presentation/pages/setpassword.dart';
 import 'package:ligare/presentation/pages/setpreferences_screen.dart';
@@ -16,6 +20,10 @@ class Routes {
   static const String regesteriationRoute = "/Regesteriation";
   static const String setPasswordRoute = "/SetPassword";
   static const String setPreferencesRoute = "/SetPreferences";
+  static const String favBrandsRoute = "/FavBrands";
+  static const String allSetRoute = "/AllSet";
+  static const String homeRoute = "/Home";
+  static const String notificationsRoute = "/Notifications";
 }
 
 class RouteGenerator {
@@ -35,6 +43,14 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const SetPasswordScreen());
       case Routes.setPreferencesRoute:
         return MaterialPageRoute(builder: (_) => const SetPreferencesScreen());
+      case Routes.favBrandsRoute:
+        return MaterialPageRoute(builder: (_) => const FavoriteBrandsScreen());
+      case Routes.allSetRoute:
+        return MaterialPageRoute(builder: (_) => const AllSetScreen());
+      case Routes.homeRoute:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
+      case Routes.notificationsRoute:
+        return MaterialPageRoute(builder: (_) => const NotificationsScreen());
 
       default:
         return undefinedRoute();

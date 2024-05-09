@@ -6,16 +6,23 @@ class AppCustomButton extends StatelessWidget {
     super.key,
     required this.buttonChild,
     required this.ontap,
+    this.buttonWidth = double.infinity,
+    this.buttonPadding,
+    this.heightPercent = 1 / 15,
   });
   final Widget buttonChild;
   final Function() ontap;
+  final double buttonWidth;
+  final EdgeInsetsGeometry? buttonPadding;
+  final double heightPercent;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: ontap,
       child: Container(
-        width: double.infinity,
-        height: Device.deviceHeight(context: context, percent: 1 / 15),
+        margin: buttonPadding,
+        width: buttonWidth,
+        height: Device.deviceHeight(context: context, percent: heightPercent),
         color: Colors.white,
         alignment: Alignment.center,
         child: buttonChild,

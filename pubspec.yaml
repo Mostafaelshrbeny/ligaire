@@ -46,6 +46,7 @@ dependencies:
   local_auth_android: ^1.0.35
   path_provider: ^2.1.3
   pinput: ^4.0.0
+  font_awesome_flutter: ^10.7.0
 flutter_native_splash:
   image: assets/images/Gsplash.png
   # andriod: true

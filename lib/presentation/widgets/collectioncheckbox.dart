@@ -1,17 +1,19 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:ligare/constants/assets.dart';
+
 import 'package:ligare/constants/device.dart';
-import 'package:ligare/core/lang/locale_keys.g.dart';
 
 class CollectionCheckBox extends StatelessWidget {
   const CollectionCheckBox({
     super.key,
     required this.collectionName,
     required this.collectionImage,
+    this.onCheck,
+    required this.ischecked,
   });
   final String collectionName, collectionImage;
+  final Function(bool?)? onCheck;
+  final bool ischecked;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,9 +23,11 @@ class CollectionCheckBox extends StatelessWidget {
       child: Row(
         children: [
           Checkbox(
+            checkColor: Colors.grey,
+            activeColor: Colors.white,
             materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            value: false,
-            onChanged: (value) {},
+            value: ischecked,
+            onChanged: onCheck,
             side: const BorderSide(width: 1, color: Colors.grey),
           ),
           const Gap(12),

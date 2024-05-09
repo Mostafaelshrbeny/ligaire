@@ -59,7 +59,7 @@ class AppThemeData {
   }
 
   static const ColorScheme darkColorScheme = ColorScheme(
-    primary: Color(0xFFFF8383),
+    primary: Colors.white,
     primaryContainer: Color(0xFF1CDEC9),
     secondary: Color(0xFF4D1F7C),
     secondaryContainer: Color(0xFF451B6F),
@@ -100,7 +100,12 @@ class AppThemeData {
       displaySmall: TextStyle(
           fontFamily: FontFamily.appFontFamily,
           color: Color.fromRGBO(226, 227, 228, 1),
-          fontSize: 14));
+          fontSize: 14),
+      labelSmall: TextStyle(
+          fontFamily: FontFamily.appFontFamily,
+          color: Colors.grey,
+          fontSize: 10));
+
   static TextStyle buttonTextThem(BuildContext context) {
     return Theme.of(context)
         .textTheme
