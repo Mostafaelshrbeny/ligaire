@@ -7,6 +7,7 @@ import 'package:ligare/data/data_sources/localedate.dart';
 import 'package:ligare/domain/use_cases/mainmethods.dart';
 
 import 'package:ligare/presentation/pages/introscreen.dart';
+import 'package:ligare/presentation/pages/mainlayerscreen.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -35,7 +36,7 @@ class _MyAppState extends State<MyApp> {
       locale: context.locale,
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
-      home: const IntroScreen(),
+      home: const MainLayerScreen(),
     );
   }
 }

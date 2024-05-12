@@ -43,7 +43,7 @@ class AllSetScreen extends StatelessWidget {
                   style: AppThemeData.buttonTextThem(context),
                 ),
                 ontap: () => Navigator.pushNamedAndRemoveUntil(
-                    context, Routes.homeRoute, (route) => false)),
+                    context, Routes.mainlayerRoute, (route) => false)),
           )
         ],
       ),

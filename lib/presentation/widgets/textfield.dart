@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ligare/constants/app_theme.dart';
 import 'package:ligare/constants/device.dart';
 import 'package:ligare/core/lang/locale_keys.g.dart';
 
@@ -11,11 +12,12 @@ class AppCustomTextField extends StatelessWidget {
     required this.hint,
     this.suffix,
     this.isHidden = false,
+    this.prefix,
   });
   final Function(String)? onChange;
   final String hint;
   final bool isHidden;
-  final Widget? suffix;
+  final Widget? suffix, prefix;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -25,16 +27,17 @@ class AppCustomTextField extends StatelessWidget {
         maxLines: 1,
         obscureText: isHidden,
         decoration: InputDecoration(
+            prefixIcon: prefix,
             suffixIcon: suffix,
-            enabledBorder: const OutlineInputBorder(
+            enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                     style: BorderStyle.none,
-                    color: Color.fromRGBO(36, 36, 37, 1),
+                    color: AppThemeData.cardColor,
                     width: 0)),
-            focusedBorder: const OutlineInputBorder(
+            focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                     style: BorderStyle.none,
-                    color: Color.fromRGBO(36, 36, 37, 1),
+                    color: AppThemeData.cardColor,
                     width: 0)),
             hintText: hint,
             hintStyle: Theme.of(context)
@@ -42,7 +45,7 @@ class AppCustomTextField extends StatelessWidget {
                 .displaySmall!
                 .copyWith(color: Colors.grey),
             filled: true,
-            fillColor: const Color.fromRGBO(36, 36, 37, 1)),
+            fillColor: AppThemeData.cardColor),
       ),
     );
   }

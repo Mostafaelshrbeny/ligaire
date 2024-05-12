@@ -1,10 +1,15 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:gap/gap.dart';
-import 'package:ligare/constants/app_routs.dart';
 import 'package:ligare/constants/assets.dart';
+
 import 'package:ligare/constants/device.dart';
-import 'package:ligare/presentation/widgets/custombutton.dart';
+import 'package:ligare/core/lang/locale_keys.g.dart';
+
+import 'package:ligare/presentation/widgets/homegreybox.dart';
+
+import 'package:ligare/presentation/widgets/homepostslist.dart';
 import 'package:ligare/presentation/widgets/horizintalscroll.dart';
 import 'package:ligare/presentation/widgets/ligairetitile.dart';
 import 'package:ligare/presentation/widgets/notificationring.dart';
@@ -23,44 +28,40 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.symmetric(vertical: 24),
         children: [
-          const AppHorizintalScroll(),
-          Gap(Device.deviceHeight(context: context, percent: 1 / 16)),
-          Container(
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            height: Device.deviceHeight(context: context, percent: 1 / 4.2),
-            margin: const EdgeInsets.symmetric(horizontal: 16),
-            color: Colors.grey.withOpacity(0.25),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Favorite car models',
-                          style: Theme.of(context).textTheme.displayMedium,
-                        ),
-                        const Gap(8),
-                        Text(
-                          'Select your favorite car brands and models to be able to personalize your experience !',
-                          maxLines: 3,
-                          style: Theme.of(context).textTheme.headlineSmall,
-                          overflow: TextOverflow.clip,
-                        ),
-                        const Gap(8),
-                        const Spacer(),
-                        AppCustomButton(
-                            buttonChild: const Text('data'), ontap: () {})
-                      ],
-                    ),
+          AppHorizintalScroll(
+            hasCover: true,
+            coverImage: Assets.watchAsset,
+            item: Align(
+              alignment: Alignment.bottomLeft,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'LAMBO Royal...',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineSmall!
+                        .copyWith(color: Colors.white),
                   ),
-                ),
-                Image.asset(Assets.halfCar)
-              ],
+                  const Gap(2),
+                  Text(
+                    '3 Mins ago',
+                    style: Theme.of(context).textTheme.labelSmall,
+                  ),
+                ],
+              ),
             ),
-          )
+          ),
+          Gap(Device.deviceHeight(context: context, percent: 1 / 16)),
+          HomeGreyBox(
+            label: 'Favorite car models',
+            dexcription:
+                'Select your favorite car brands and models to be able to personalize your experience !',
+            buttontext: LocaleKeys.selectyourfavorites.tr(),
+          ),
+          Gap(Device.deviceHeight(context: context, percent: 1 / 16)),
+          const HomePostsList()
         ],
       ),
     );

@@ -61,10 +61,10 @@ class AppThemeData {
   static const ColorScheme darkColorScheme = ColorScheme(
     primary: Colors.white,
     primaryContainer: Color(0xFF1CDEC9),
-    secondary: Color(0xFF4D1F7C),
-    secondaryContainer: Color(0xFF451B6F),
+    secondary: Colors.grey,
+    secondaryContainer: Colors.grey,
     background: Color.fromARGB(255, 24, 23, 23),
-    surface: Color(0xFF1F1929),
+    surface: Colors.grey,
     onBackground: Color(0x0DFFFFFF),
     // White with 0.05 opacity
     error: _darkFillColor,
@@ -101,6 +101,10 @@ class AppThemeData {
           fontFamily: FontFamily.appFontFamily,
           color: Color.fromRGBO(226, 227, 228, 1),
           fontSize: 14),
+      labelLarge: TextStyle(
+          fontFamily: FontFamily.appFontFamily,
+          color: Color.fromRGBO(226, 227, 228, 1),
+          fontSize: 20),
       labelSmall: TextStyle(
           fontFamily: FontFamily.appFontFamily,
           color: Colors.grey,
@@ -112,4 +116,6 @@ class AppThemeData {
         .displaySmall!
         .copyWith(color: Colors.black);
   }
+
+  static Color cardColor = const Color.fromRGBO(36, 36, 37, 1);
 }

@@ -29,7 +29,11 @@ class SkipOrNextRow extends StatelessWidget {
             children: [
               TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, skipScreen);
+                    Navigator.pushNamedAndRemoveUntil(
+                      context,
+                      skipScreen,
+                      (route) => false,
+                    );
                   },
                   child: Text(
                     LocaleKeys.skip.tr(),

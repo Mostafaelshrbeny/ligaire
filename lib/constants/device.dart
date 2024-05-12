@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Device {
-  static hideKeyboard(BuildContext context) {
-    FocusScope.of(context).unfocus();
-  }
+  // static hideKeyboard(BuildContext context) {
+  //   FocusScope.of(context).unfocus();
+  // }
 
   static double deviceHeight(
       {required BuildContext context, double percent = 1}) {
@@ -17,5 +17,11 @@ class Device {
 
   static closeKeyboard() {
     FocusManager.instance.primaryFocus?.unfocus();
+  }
+
+  static double deviceStatusBar({
+    required BuildContext context,
+  }) {
+    return MediaQuery.of(context).viewPadding.top;
   }
 }

@@ -22,8 +22,8 @@
         "thisisokay": "This is okay, Next",
         "firstname": "First name",
         "lastname": "Last name",
-        "e-mail": "E-mail",
-        "typeyoure-mail": "Type your e-mail",
+        "email": "E-mail",
+        "typeyouremail": "Type your e-mail",
         "phonenumber": "Phone Number",
         "occupation": "Occupation",
         "typeyouroccupation": "Type your occupation",
@@ -37,7 +37,7 @@
         "verificationcode": "Verification code",
         "pleasetypetheotp": "Please type the OTP sent to your phone number\n that ends with •••••••••",
         "didntreceive": "Didn’t receive the code ?",
-        "re-send": "Re-send",
+        "resend": "Re-send",
         "verify": "Verify"
     },
     "password": {
@@ -45,7 +45,7 @@
         "password": "Password",
         "typeyourpassword": "Type your password",
         "confirmpassword": "Confirm password",
-        "re-typeyourpassword": "Re-type your password"
+        "retypeyourpassword": "Re-type your password"
     },
     "login": "Log in",
     "withfaceid": "Or login with Face ID",
@@ -192,5 +192,9 @@
     "yes": "Yes",
     "no": "No",
     "select": "Select",
-    "findatime": "Find a time to meet with Ligaire"
+    "findatime": "Find a time to meet with Ligaire",
+    "viewall":"View all",
+    "support":"Support",
+    "aboutLigaire":"About Ligaire"
+    
 }

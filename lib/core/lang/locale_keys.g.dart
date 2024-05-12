@@ -24,8 +24,8 @@ abstract class LocaleKeys {
   static const signupthisisokay = 'signup.thisisokay';
   static const signupfirstname = 'signup.firstname';
   static const signuplastname = 'signup.lastname';
-  static const signupemail = 'signup.e-mail';
-  static const signuptypeyouremail = 'signup.typeyoure-mail';
+  static const signupemail = 'signup.email';
+  static const signuptypeyouremail = 'signup.typeyouremail';
   static const signupphonenumber = 'signup.phonenumber';
   static const signupoccupation = 'signup.occupation';
   static const signuptypeyouroccupation = 'signup.typeyouroccupation';
@@ -39,14 +39,14 @@ abstract class LocaleKeys {
   static const verifyverificationcode = 'verify.verificationcode';
   static const verifypleasetypetheotp = 'verify.pleasetypetheotp';
   static const verifydidntreceive = 'verify.didntreceive';
-  static const verifyresend = 'verify.re-send';
+  static const verifyresend = 'verify.resend';
   static const verifyverify = 'verify.verify';
   static const verify = 'verify';
   static const passwordsetyourpassword = 'password.setyourpassword';
   static const passwordpassword = 'password.password';
   static const passwordtypeyourpassword = 'password.typeyourpassword';
   static const passwordconfirmpassword = 'password.confirmpassword';
-  static const passwordretypeyourpassword = 'password.re-typeyourpassword';
+  static const passwordretypeyourpassword = 'password.retypeyourpassword';
   static const password = 'password';
   static const login = 'login';
   static const withfaceid = 'withfaceid';
@@ -191,4 +191,7 @@ abstract class LocaleKeys {
   static const no = 'no';
   static const select = 'select';
   static const findatime = 'findatime';
+  static const viewall = 'viewall';
+  static const support = 'support';
+  static const aboutLigaire = 'aboutLigaire';
 }
