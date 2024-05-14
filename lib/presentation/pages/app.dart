@@ -5,8 +5,6 @@ import 'package:ligare/constants/app_routs.dart';
 import 'package:ligare/constants/app_theme.dart';
 import 'package:ligare/data/data_sources/localedate.dart';
 import 'package:ligare/domain/use_cases/mainmethods.dart';
-
-import 'package:ligare/presentation/pages/introscreen.dart';
 import 'package:ligare/presentation/pages/mainlayerscreen.dart';
 
 class MyApp extends StatefulWidget {

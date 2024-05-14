@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:ligare/constants/app_routs.dart';
 import 'package:ligare/constants/app_theme.dart';
 import 'package:ligare/constants/device.dart';
 import 'package:ligare/core/lang/locale_keys.g.dart';
@@ -31,13 +32,16 @@ class SearchRowWidget extends StatelessWidget {
               )),
         )),
         const Gap(8),
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 8),
-          height: Device.deviceHeight(context: context, percent: 1 / 16),
-          color: AppThemeData.cardColor,
-          child: const Center(
-            child: Icon(Icons.filter_alt_outlined,
-                color: Color.fromRGBO(182, 182, 184, 1)),
+        InkWell(
+          onTap: () => Navigator.pushNamed(context, Routes.filterRoute),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            height: Device.deviceHeight(context: context, percent: 1 / 16),
+            color: AppThemeData.cardColor,
+            child: const Center(
+              child: Icon(Icons.filter_alt_outlined,
+                  color: Color.fromRGBO(182, 182, 184, 1)),
+            ),
           ),
         )
       ],

@@ -10,7 +10,7 @@ class AppBackarrow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.only(left: 16),
       child: InkWell(
           onTap: () => Navigator.pop(context),
           child: Image.asset('assets/images/Long-arroe.png')),

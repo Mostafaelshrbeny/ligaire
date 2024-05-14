@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:ligare/presentation/pages/allsetprefscreen.dart';
 import 'package:ligare/presentation/pages/explorescreen.dart';
 import 'package:ligare/presentation/pages/favoritebrandscreen.dart';
+import 'package:ligare/presentation/pages/filter_screen.dart';
 import 'package:ligare/presentation/pages/homescreen.dart';
 import 'package:ligare/presentation/pages/loginscreen.dart';
 import 'package:ligare/presentation/pages/introscreen.dart';
 import 'package:ligare/presentation/pages/mainlayerscreen.dart';
 import 'package:ligare/presentation/pages/new_inscreen.dart';
 import 'package:ligare/presentation/pages/notificatioscreen.dart';
+import 'package:ligare/presentation/pages/pricerangescreen.dart';
 import 'package:ligare/presentation/pages/regesteriation.dart';
+import 'package:ligare/presentation/pages/selectedfilter_screen.dart';
 import 'package:ligare/presentation/pages/setpassword.dart';
 import 'package:ligare/presentation/pages/setpreferences_screen.dart';
 import 'package:ligare/presentation/pages/signupintro.dart';
@@ -30,6 +33,9 @@ class Routes {
   static const String notificationsRoute = "/Notifications";
   static const String exploreRoute = "/Explore";
   static const String newInRoute = "/newIn";
+  static const String filterRoute = "/filter";
+  static const String selectedFilterRoute = "/Selectedfilter";
+  static const String priceRangeRoute = "/priceRange";
 }
 
 class RouteGenerator {
@@ -63,6 +69,13 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const ExploreScreen());
       case Routes.newInRoute:
         return MaterialPageRoute(builder: (_) => const NewInScreen());
+      case Routes.filterRoute:
+        return MaterialPageRoute(builder: (_) => const FilterSearchScreen());
+      case Routes.selectedFilterRoute:
+        return MaterialPageRoute(
+            builder: (_) => const SelectedFilterScreen(), settings: settings);
+      case Routes.priceRangeRoute:
+        return MaterialPageRoute(builder: (_) => const PriceRangeScreen());
 
       default:
         return undefinedRoute();
