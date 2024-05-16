@@ -7,9 +7,11 @@ class GridListProduct extends StatelessWidget {
     super.key,
     required this.itemsNumber,
     required this.hPadding,
+    this.twoInRow = true,
   });
   final int itemsNumber;
   final double hPadding;
+  final bool twoInRow;
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
@@ -21,9 +23,11 @@ class GridListProduct extends StatelessWidget {
               Device.deviceWidth(context: context, percent: 1 / 15),
           mainAxisSpacing:
               Device.deviceHeight(context: context, percent: 1 / 15),
-          childAspectRatio: 1 / 1.5,
-          crossAxisCount: 2),
-      itemBuilder: (context, index) => const GridsProuduct(),
+          childAspectRatio: twoInRow ? 1 / 1.5 : 1.4 / 1,
+          crossAxisCount: twoInRow ? 2 : 1),
+      itemBuilder: (context, index) => GridsProuduct(
+        widthpercent: twoInRow ? 1 / 2.3 : 1,
+      ),
       itemCount: itemsNumber,
     );
   }

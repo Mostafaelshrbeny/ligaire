@@ -8,8 +8,9 @@ import 'package:ligare/core/lang/locale_keys.g.dart';
 class GridsProuduct extends StatelessWidget {
   const GridsProuduct({
     super.key,
+    this.widthpercent = 1 / 2.3,
   });
-
+  final double widthpercent;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -20,7 +21,7 @@ class GridsProuduct extends StatelessWidget {
           child: Container(
             color: AppThemeData.cardColor,
             height: Device.deviceWidth(context: context, percent: 1 / 2),
-            width: Device.deviceWidth(context: context, percent: 1 / 2.3),
+            width: Device.deviceWidth(context: context, percent: widthpercent),
             child: Stack(
               children: [
                 Center(

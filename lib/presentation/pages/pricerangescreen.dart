@@ -35,6 +35,7 @@ class _PriceRangeScreenState extends State<PriceRangeScreen> {
             thickness: 2,
             color: ThemeData.dark().cardColor,
           ),
+          const Gap(16),
           Padding(
             padding: const EdgeInsets.only(left: 16),
             child: Text(
@@ -46,7 +47,8 @@ class _PriceRangeScreenState extends State<PriceRangeScreen> {
             ),
           ),
           RangeSlider(
-            divisions: 10,
+            inactiveColor: ThemeData.dark().scaffoldBackgroundColor,
+            divisions: 100,
             min: 0,
             max: 100,
             onChanged: (value) {
@@ -56,40 +58,41 @@ class _PriceRangeScreenState extends State<PriceRangeScreen> {
               });
             },
             values: RangeValues(rangeStart, rangeEnd),
-            labels: RangeLabels('$rangeStart M', '$rangeEnd M'),
+            // labels: RangeLabels('$rangeStart M', '$rangeEnd M'),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: Row(
               children: [
-                Text('${rangeStart.toInt()} M',
-                    style: Theme.of(context).textTheme.headlineSmall),
+                Text('0 M', style: Theme.of(context).textTheme.headlineSmall),
                 const Spacer(),
-                Text('${rangeEnd.toInt()} M',
-                    style: Theme.of(context).textTheme.headlineSmall)
+                Text('100 M', style: Theme.of(context).textTheme.headlineSmall)
               ],
             ),
           ),
           const Gap(32),
-          Row(
-            children: [
-              Text(
-                LocaleKeys.from.tr(),
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineSmall!
-                    .copyWith(color: Colors.white),
-              ),
-              PriceRangeCard(price: rangeStart),
-              Text(
-                LocaleKeys.to.tr(),
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineSmall!
-                    .copyWith(color: Colors.white),
-              ),
-              PriceRangeCard(price: rangeEnd),
-            ],
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
+              children: [
+                Text(
+                  LocaleKeys.from.tr(),
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineSmall!
+                      .copyWith(color: Colors.white),
+                ),
+                PriceRangeCard(price: rangeStart.toInt()),
+                Text(
+                  LocaleKeys.to.tr(),
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineSmall!
+                      .copyWith(color: Colors.white),
+                ),
+                PriceRangeCard(price: rangeEnd.toInt()),
+              ],
+            ),
           )
         ],
       ),

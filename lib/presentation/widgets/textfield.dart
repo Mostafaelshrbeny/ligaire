@@ -9,13 +9,14 @@ class AppCustomTextField extends StatelessWidget {
   const AppCustomTextField({
     super.key,
     this.onChange,
-    required this.hint,
+    this.hint,
     this.suffix,
     this.isHidden = false,
     this.prefix,
+    this.initial,
   });
   final Function(String)? onChange;
-  final String hint;
+  final String? hint, initial;
   final bool isHidden;
   final Widget? suffix, prefix;
   @override
@@ -23,6 +24,7 @@ class AppCustomTextField extends StatelessWidget {
     return SizedBox(
       height: Device.deviceHeight(context: context, percent: 1 / 16),
       child: TextFormField(
+        initialValue: initial,
         onChanged: onChange,
         maxLines: 1,
         obscureText: isHidden,

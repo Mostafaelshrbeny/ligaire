@@ -6,7 +6,7 @@ class PriceRangeCard extends StatelessWidget {
     required this.price,
   });
 
-  final double price;
+  final int price;
 
   @override
   Widget build(BuildContext context) {

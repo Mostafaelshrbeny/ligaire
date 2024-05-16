@@ -4,6 +4,7 @@ import 'package:ligare/presentation/pages/explorescreen.dart';
 import 'package:ligare/presentation/pages/favoritebrandscreen.dart';
 import 'package:ligare/presentation/pages/filter_screen.dart';
 import 'package:ligare/presentation/pages/homescreen.dart';
+import 'package:ligare/presentation/pages/itemdetails_screen.dart';
 import 'package:ligare/presentation/pages/loginscreen.dart';
 import 'package:ligare/presentation/pages/introscreen.dart';
 import 'package:ligare/presentation/pages/mainlayerscreen.dart';
@@ -36,6 +37,7 @@ class Routes {
   static const String filterRoute = "/filter";
   static const String selectedFilterRoute = "/Selectedfilter";
   static const String priceRangeRoute = "/priceRange";
+  static const String itemDetailsRoute = "/ItemDetails";
 }
 
 class RouteGenerator {
@@ -76,6 +78,8 @@ class RouteGenerator {
             builder: (_) => const SelectedFilterScreen(), settings: settings);
       case Routes.priceRangeRoute:
         return MaterialPageRoute(builder: (_) => const PriceRangeScreen());
+      case Routes.itemDetailsRoute:
+        return MaterialPageRoute(builder: (_) => const ItemDetailsScreen());
 
       default:
         return undefinedRoute();

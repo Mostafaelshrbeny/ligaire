@@ -5,7 +5,7 @@ import 'package:ligare/presentation/pages/accountscreen.dart';
 import 'package:ligare/presentation/pages/explorescreen.dart';
 import 'package:ligare/presentation/pages/homescreen.dart';
 import 'package:ligare/presentation/pages/searchscreen.dart';
-import 'package:ligare/presentation/widgets/bottom_nav_child.dart';
+import 'package:ligare/presentation/pages/sellscreen.dart';
 
 class MainLayerScreen extends StatefulWidget {
   const MainLayerScreen({super.key});
@@ -19,6 +19,7 @@ class _MainLayerScreenState extends State<MainLayerScreen> {
   List<Widget> pages = [
     const HomeScreen(),
     const SearchScreen(),
+    const SellScreen(),
     const ExploreScreen(),
     const AccountScreen()
   ];
@@ -27,52 +28,24 @@ class _MainLayerScreenState extends State<MainLayerScreen> {
     return Scaffold(
       body: pages[currentPageIndex],
       bottomNavigationBar: BottomNavigationBar(
-        showUnselectedLabels: false,
-        showSelectedLabels: false,
-        selectedFontSize: 0,
-        unselectedFontSize: 0,
+        showUnselectedLabels: true,
+        showSelectedLabels: true,
+        selectedFontSize: 10,
+        unselectedFontSize: 10,
+        selectedItemColor: Colors.white,
         currentIndex: currentPageIndex,
+        // selectedLabelStyle: Theme.of(context).textTheme.labelSmall,
         items: [
           BottomNavigationBarItem(
-              icon: BottomNavChild(
-                currentPageIndex: currentPageIndex,
-                index: 0,
-                icon: Icons.home_filled,
-                label: LocaleKeys.home.tr(),
-              ),
-              label: LocaleKeys.home.tr()),
+              icon: const Icon(Icons.home_filled), label: LocaleKeys.home.tr()),
           BottomNavigationBarItem(
-              icon: BottomNavChild(
-                currentPageIndex: currentPageIndex,
-                label: LocaleKeys.search.tr(),
-                icon: Icons.search,
-                index: 1,
-              ),
-              label: LocaleKeys.search.tr()),
+              icon: const Icon(Icons.search), label: LocaleKeys.search.tr()),
           BottomNavigationBarItem(
-              icon: BottomNavChild(
-                currentPageIndex: currentPageIndex,
-                label: LocaleKeys.sell.tr(),
-                icon: Icons.add_circle,
-                index: 2,
-              ),
-              label: LocaleKeys.sell.tr()),
+              icon: const Icon(Icons.add_circle), label: LocaleKeys.sell.tr()),
           BottomNavigationBarItem(
-              icon: BottomNavChild(
-                currentPageIndex: currentPageIndex,
-                label: LocaleKeys.explore.tr(),
-                icon: Icons.explore,
-                index: 3,
-              ),
-              label: LocaleKeys.explore.tr()),
+              icon: const Icon(Icons.explore), label: LocaleKeys.explore.tr()),
           BottomNavigationBarItem(
-              icon: BottomNavChild(
-                currentPageIndex: currentPageIndex,
-                label: LocaleKeys.account.tr(),
-                icon: Icons.person,
-                index: 4,
-              ),
-              label: LocaleKeys.account.tr()),
+              icon: const Icon(Icons.person), label: LocaleKeys.account.tr()),
         ],
         onTap: (value) => setState(() {
           currentPageIndex = value;

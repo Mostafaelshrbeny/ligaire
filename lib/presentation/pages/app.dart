@@ -18,9 +18,6 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     MainAppFunctions.removeSplash();
-    print(HiveLocaleData.loginbox!.get('first'));
-    HiveLocaleData.loginbox!.put('first', 'value');
-
     super.initState();
   }
 
