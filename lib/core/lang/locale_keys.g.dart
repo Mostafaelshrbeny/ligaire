@@ -194,4 +194,7 @@ abstract class LocaleKeys {
   static const viewall = 'viewall';
   static const support = 'support';
   static const aboutLigaire = 'aboutLigaire';
+  static const startSelling = 'startSelling';
+  static const kilometers = 'kilometers';
+  static const chooseaKilo = 'chooseaKilo';
 }

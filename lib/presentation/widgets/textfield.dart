@@ -1,9 +1,6 @@
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ligare/constants/app_theme.dart';
 import 'package:ligare/constants/device.dart';
-import 'package:ligare/core/lang/locale_keys.g.dart';
 
 class AppCustomTextField extends StatelessWidget {
   const AppCustomTextField({
@@ -14,19 +11,26 @@ class AppCustomTextField extends StatelessWidget {
     this.isHidden = false,
     this.prefix,
     this.initial,
+    this.maxlines = 1,
+    this.readonly = false,
+    this.ontap,
   });
   final Function(String)? onChange;
+  final Function()? ontap;
   final String? hint, initial;
-  final bool isHidden;
+  final bool isHidden, readonly;
   final Widget? suffix, prefix;
+  final int? maxlines;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: Device.deviceHeight(context: context, percent: 1 / 16),
+      height:
+          Device.deviceHeight(context: context, percent: 1 / (16 / maxlines!)),
       child: TextFormField(
         initialValue: initial,
         onChanged: onChange,
-        maxLines: 1,
+        readOnly: readonly,
+        maxLines: maxlines,
         obscureText: isHidden,
         decoration: InputDecoration(
             prefixIcon: prefix,

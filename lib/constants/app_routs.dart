@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ligare/presentation/pages/allsetprefscreen.dart';
+import 'package:ligare/presentation/pages/calender_screen.dart';
 import 'package:ligare/presentation/pages/explorescreen.dart';
 import 'package:ligare/presentation/pages/favoritebrandscreen.dart';
 import 'package:ligare/presentation/pages/filter_screen.dart';
@@ -8,11 +9,14 @@ import 'package:ligare/presentation/pages/itemdetails_screen.dart';
 import 'package:ligare/presentation/pages/loginscreen.dart';
 import 'package:ligare/presentation/pages/introscreen.dart';
 import 'package:ligare/presentation/pages/mainlayerscreen.dart';
+import 'package:ligare/presentation/pages/meetingbooked_screen.dart';
+import 'package:ligare/presentation/pages/merchant_screen.dart';
 import 'package:ligare/presentation/pages/new_inscreen.dart';
 import 'package:ligare/presentation/pages/notificatioscreen.dart';
 import 'package:ligare/presentation/pages/pricerangescreen.dart';
 import 'package:ligare/presentation/pages/regesteriation.dart';
 import 'package:ligare/presentation/pages/selectedfilter_screen.dart';
+import 'package:ligare/presentation/pages/sellproduct_screen.dart';
 import 'package:ligare/presentation/pages/setpassword.dart';
 import 'package:ligare/presentation/pages/setpreferences_screen.dart';
 import 'package:ligare/presentation/pages/signupintro.dart';
@@ -38,6 +42,10 @@ class Routes {
   static const String selectedFilterRoute = "/Selectedfilter";
   static const String priceRangeRoute = "/priceRange";
   static const String itemDetailsRoute = "/ItemDetails";
+  static const String sellProductRoute = "/SellProduct";
+  static const String merchantRoute = "/Merchant";
+  static const String meetLigaireRoute = "/MeetLigaire";
+  static const String meetingBookedRoute = "/MeetingBooked";
 }
 
 class RouteGenerator {
@@ -80,6 +88,14 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const PriceRangeScreen());
       case Routes.itemDetailsRoute:
         return MaterialPageRoute(builder: (_) => const ItemDetailsScreen());
+      case Routes.sellProductRoute:
+        return MaterialPageRoute(builder: (_) => const SellProductScreen());
+      case Routes.merchantRoute:
+        return MaterialPageRoute(builder: (_) => const MerchantScreen());
+      case Routes.meetLigaireRoute:
+        return MaterialPageRoute(builder: (_) => const MeetLigaireScreen());
+      case Routes.meetingBookedRoute:
+        return MaterialPageRoute(builder: (_) => const MeetingBookedScreen());
 
       default:
         return undefinedRoute();

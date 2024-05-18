@@ -8,14 +8,14 @@ class AppCustomButton extends StatelessWidget {
     required this.ontap,
     this.buttonWidth = double.infinity,
     this.buttonPadding,
-    this.heightPercent = 1 / 15,
+    this.heightPercent,
     this.backgroundColor = Colors.white,
   });
   final Widget buttonChild;
   final Function() ontap;
   final double buttonWidth;
   final EdgeInsetsGeometry? buttonPadding;
-  final double heightPercent;
+  final double? heightPercent;
   final Color? backgroundColor;
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,8 @@ class AppCustomButton extends StatelessWidget {
             color: backgroundColor, border: Border.all(color: Colors.white)),
         margin: buttonPadding,
         width: buttonWidth,
-        height: Device.deviceHeight(context: context, percent: heightPercent),
+        height: Device.deviceHeight(
+            context: context, percent: heightPercent ?? 1 / 15),
         alignment: Alignment.center,
         child: buttonChild,
       ),

@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:ligare/constants/assets.dart';
 import 'package:ligare/constants/device.dart';
-
 import 'package:ligare/presentation/blocs/IntroCubit/intro_cubit.dart';
 import 'package:ligare/presentation/blocs/IntroCubit/intro_state.dart';
-
 import 'package:ligare/presentation/widgets/introbackground.dart';
 import 'package:ligare/presentation/widgets/ligairetitile.dart';
 
@@ -32,7 +29,9 @@ class _IntroScreenState extends State<IntroScreen> {
               child: Scaffold(
                 body: Stack(
                   children: [
-                    const IntroBackground(),
+                    const IntroBackground(
+                      backgroundImage: Assets.introGif,
+                    ),
                     Container(
                       height: Device.deviceHeight(context: context),
                       width: Device.deviceWidth(context: context),

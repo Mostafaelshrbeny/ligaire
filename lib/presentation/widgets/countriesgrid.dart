@@ -5,10 +5,8 @@ import 'package:gap/gap.dart';
 import 'package:ligare/constants/app_theme.dart';
 import 'package:ligare/constants/assets.dart';
 import 'package:ligare/constants/countries.dart';
-import 'package:ligare/constants/device.dart';
 import 'package:ligare/core/lang/locale_keys.g.dart';
 import 'package:ligare/presentation/blocs/IntroCubit/intro_cubit.dart';
-import 'package:ligare/presentation/pages/introscreen.dart';
 import 'package:ligare/presentation/widgets/checkbox.dart';
 import 'package:ligare/presentation/widgets/custombutton.dart';
 

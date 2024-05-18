@@ -211,7 +211,10 @@ class CodegenLoader extends AssetLoader{
   "findatime": "Find a time to meet with Ligaire",
   "viewall": "View all",
   "support": "Support",
-  "aboutLigaire": "About Ligaire"
+  "aboutLigaire": "About Ligaire",
+  "startSelling": "Start Selling",
+  "kilometers": "Kilometers",
+  "chooseaKilo": "Choose a Kilometers"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en_US": en_US};
 }

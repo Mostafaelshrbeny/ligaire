@@ -1,11 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-
 import 'package:ligare/constants/app_routs.dart';
 import 'package:ligare/constants/app_theme.dart';
-import 'package:ligare/data/data_sources/localedate.dart';
 import 'package:ligare/domain/use_cases/mainmethods.dart';
-import 'package:ligare/presentation/pages/mainlayerscreen.dart';
+import 'package:ligare/presentation/pages/introscreen.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -31,7 +29,7 @@ class _MyAppState extends State<MyApp> {
       locale: context.locale,
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
-      home: const MainLayerScreen(),
+      home: const IntroScreen(),
     );
   }
 }

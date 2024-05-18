@@ -6,6 +6,8 @@ class Assets {
       "assets/images/domino-p2WUEFGrAdA-unsplash 1.png";
   static const String halfCar =
       "assets/images/redcharlie-vQVWIsIBafA-unsplash__1_-removebg-preview (1) 1.png";
+  static const String mechantBackground =
+      "assets/images/stories--BqB2zptPQo-unsplash 1.png";
 
   static List<String> brandLogo = [
     'assets/images/Group 133.png',

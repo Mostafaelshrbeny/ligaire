@@ -1,18 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
-
 import 'package:flutter/material.dart';
-
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:ligare/constants/app_routs.dart';
-
 import 'package:ligare/constants/device.dart';
 import 'package:ligare/core/lang/locale_keys.g.dart';
-import 'package:ligare/presentation/blocs/SetPrefrencesCubit/set_prefrences_cubit.dart';
-import 'package:ligare/presentation/blocs/SetPrefrencesCubit/set_prefrences_state.dart';
 import 'package:ligare/presentation/pages/skipornext.dart';
 import 'package:ligare/presentation/widgets/backarrowbutton.dart';
-
 import 'package:ligare/presentation/widgets/setcollectionlist.dart';
 
 class SetPreferencesScreen extends StatefulWidget {

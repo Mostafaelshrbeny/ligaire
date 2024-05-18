@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:ligare/constants/app_theme.dart';
 import 'package:ligare/constants/device.dart';
 
 class TwoLinesDescription extends StatelessWidget {
@@ -43,10 +44,14 @@ class TextWithArrow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Text(actionlabel, style: Theme.of(context).textTheme.displaySmall),
+        Text(actionlabel, style: AppThemeData.buttonTextThem(context)),
         const Gap(5),
-        const Icon(Icons.arrow_right_alt_outlined)
+        const Icon(
+          Icons.arrow_right_alt_outlined,
+          color: Colors.black,
+        )
       ],
     );
   }

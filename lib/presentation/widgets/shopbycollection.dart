@@ -1,7 +1,4 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
-import 'package:ligare/core/lang/locale_keys.g.dart';
 import 'package:ligare/presentation/widgets/horizintalscroll.dart';
 
 class ShopByCollectionScroll extends StatelessWidget {
